@@ -18,7 +18,9 @@ public class GithubService {
 
   final RestTemplate restTemplate;
 
-  public GithubService(final RestTemplate restTemplate) {this.restTemplate = restTemplate;}
+  private GithubService(final RestTemplate restTemplate) {
+    this.restTemplate = restTemplate;
+  }
 
   public Optional<GithubUser> provideUserInfo(final String login) {
     if (login == null || login.isEmpty())
@@ -29,7 +31,7 @@ public class GithubService {
           GithubUser.class);
 
       if (response.getBody() == null)
-        throw new RuntimeException("Unexpected response from github");
+        throw new RuntimeException("Unexpected response from github, empty body");
 
       return Optional.of(response.getBody());
 

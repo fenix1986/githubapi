@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 /**
  * @author Jakub Prabucki
  */
-public class User {
+class User {
 
   private final long id;
   private final String login;

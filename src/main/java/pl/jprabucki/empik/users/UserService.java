@@ -13,7 +13,9 @@ class UserService {
 
   private final GithubService githubService;
 
-  UserService(final GithubService githubService) {this.githubService = githubService;}
+  UserService(final GithubService githubService) {
+    this.githubService = githubService;
+  }
 
   User provideGithubUserInfo(final String login) {
     if (login == null || login.isEmpty())
