@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
  * @author Jakub Prabucki
  */
 @Repository
-class AuditRepository {
+public class AuditRepository {
 
   final JdbcTemplate jdbcTemplate;
 
